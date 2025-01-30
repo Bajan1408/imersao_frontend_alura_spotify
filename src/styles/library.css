@@ -1,0 +1,157 @@
+.left_menu {
+    height: 75vh;
+    width: 30vw;
+    background-color: rgba(255, 255, 255, 0.05);
+    position: fixed;
+    left: 0;
+    top: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: .5rem;
+}
+
+.your_library {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.your_library_text {
+    font-weight: 100;
+}
+
+.icon_text {
+    width: 45%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.material-symbols-outlined,
+.your_library_text,
+.bi-plus-lg {
+    color: #ccc;
+}
+
+.bi-plus-lg {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.box_with_scroll {
+    width: 100%;
+    height: 10rem;
+    max-height: 10rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.box_with_scroll.show_scroll {
+    overflow: auto;
+}
+
+.box_with_scroll::-webkit-scrollbar {
+    width: .85rem;
+}
+
+.box_with_scroll::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+.first_playlist, .podcasts {
+    height: 8rem;
+    border-radius: .5rem;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: .5rem 0 .5rem 1rem;
+
+    background-color: rgba(255, 255, 255, .05);
+}
+
+#btn_playlist, #btn_podcast {
+    width: 8rem;
+    height: 2rem;
+    font-size: .85rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+    cursor: pointer;
+}
+
+#btn_playlist:hover, #btn_podcast:hover {
+    transform: scale(1.05);
+    background-color: #ccc;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2.5rem;
+}
+
+.links {
+    height: 3rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: .75rem;
+    font-weight: 100;
+    margin-right: .5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#cookies {
+    height: 2rem;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#cookies:hover {
+    text-decoration: underline;
+}
+
+#language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 0 1rem;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border: 1px solid #fff;
+}
+
+#language:hover {
+    transform: scale(1.05);
+}
+
+.languages {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+    width: 5rem;
+    height: 1.5rem;
+}

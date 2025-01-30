@@ -1,0 +1,9 @@
+.main_container {
+    width: 68vw;
+    height: 75vh;
+    border-radius: 1rem;
+    margin-left: 30vw;
+    background-color: rgba(255, 255, 255, 0.05);
+
+    /* border: 1px solid red; */
+}

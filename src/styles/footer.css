@@ -1,0 +1,28 @@
+.bottom_bar {
+    width: 99vw;
+    height: 4.5rem;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0.3rem;
+    left: 0.3rem;
+    padding: 0 1.5rem 0 1rem;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #ca3eac, #2680f7);
+}
+
+.bottom_bar .texts h3, .bottom_bar .texts p {
+    color: #fff;
+
+}
+
+#btn_signup {
+    width: 9rem;
+    height: 3rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+
+    border: none;
+}

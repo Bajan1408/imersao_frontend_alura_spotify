@@ -1,0 +1,19 @@
+{
+    "artists": [
+        {"id": 1, "name": "Christmas Hits", "genre": "pop", "url": "../src/assets/playlist/1.jpg" },
+        {"id": 2, "name": "Pop Mix", "genre": "pop", "url": "../src/assets/playlist/2.jpg"},
+        {"id": 3, "name": "New Music Friday", "genre": "pop", "url": "../src/assets/playlist/3.jpg"},
+        {"id": 4, "name": "Pod Delas", "genre": "podcast", "url": "../src/assets/playlist/4.jpg"},
+        {"id": 5, "name": "Beast Mode", "genre": "pop", "url": "../src/assets/playlist/5.jpg"},
+        {"id": 6, "name": "Science VS", "genre": "pop", "url": "../src/assets/playlist/6.jpg"},
+        {"id": 7, "name": "Esquenta Sertanejo", "genre": "pop", "url": "../src/assets/playlist/7.jpg"},
+        {"id": 8, "name": "Pagodeira", "genre": "pagode", "url": "../src/assets/playlist/8.jpg"},
+        {"id": 9, "name": "Funk Hits", "genre": "funk", "url": "../src/assets/playlist/9.jpg"},
+        {"id": 10, "name": "Aquarela Brasileira", "genre": "mpb", "url": "../src/assets/playlist/10.jpg"},
+        {"id": 11, "name": "Rock This", "genre": "rock", "url": "../src/assets/playlist/11.jpg"},
+        {"id": 12, "name": "Rap Caviar", "genre": "pop", "url": "../src/assets/playlist/12.jpg"},
+        {"id": 13, "name": "All New Indie", "genre": "pop", "url": "../src/assets/playlist/13.jpg"},
+        {"id": 14, "name": "Chilli Vibes", "genre": "pop", "url": "../src/assets/playlist/14.jpg"},
+        {"id": 15, "name": "Viva Latino", "genre": "pop mpb", "url": "../src/assets/playlist/15.jpg"}
+    ]
+}
