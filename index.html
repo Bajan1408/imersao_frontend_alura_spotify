@@ -27,7 +27,7 @@
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                         </svg>
                     </div>
-                    <input class="search_input" placeholder="What do you want to play?" type="text">
+                    <input id="search_input" class="search_input" placeholder="What do you want to play?" type="text">
                     <div class="input_keys">
                         <button id="btn_ctrl">Ctrl</button>
                         <button id="btn_k">k</button>
@@ -63,7 +63,7 @@
 
     <aside class="left_menu">
         <div class="your_library">
-            <div class="icon_text">
+            <div class="icon_text" id="icon_text">
                 <span class="material-symbols-outlined">
                     local_library
                 </span>
@@ -108,7 +108,27 @@
         </div>
     </aside>
 
-    <main class="main_container">
+    <main class="main_container show_scroll">
+        <div class="main_cotainer__header">
+            <h2>Popular Artists</h2>
+            <h4>Show All</h4>
+        </div>
+        
+        <div class="cards">
+            <!-- <div class="card">
+                <div class="cards__img">
+                    <img src="src/assets/playlist/1.jpeg" alt="imagem card">
+                </div>
+                <div class="cards__text">
+                    <h3>Christmas Hits</h3>
+                    <p>Gospel</p>
+                </div> 
+                <div class="play hidden">
+                    <i class="bi bi-play-circle-fill"></i>
+                </div>
+            </div> -->
+            
+        </div>
 
     </main>
 
@@ -120,6 +140,6 @@
         <button id="btn_signup">Sign up free</button>
     </footer>
     
-    <script src="src/scripts/scripts.js"></script>
+    <script src="src/scripts/scripts.js" defer></script>
 </body>
 </html>
