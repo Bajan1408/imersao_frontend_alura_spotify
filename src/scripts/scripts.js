@@ -13,6 +13,8 @@ const boxWidthScroll = document.querySelector('.box_with_scroll');
 
 const mainContainer = document.querySelector('.main_container');
 
+let searchTerm = searchInput.value.toLowerCase(); //variável inicializada aqui p/ poder ser usada em mais de um lugar, inclusive dentro da função que inicia a aplicação..
+
 let timer, timerMain;
 
 boxWidthScroll.addEventListener('mouseenter', () => {
@@ -46,38 +48,6 @@ mainContainer.addEventListener('mouseleave', () => {
     }, 500);
     
 })
-
-mainContainer.addEventListener('scroll', () => {
-    const scrollTop = mainContainer.scrollTop;
-    const containerHeight = mainContainer.scrollHeight;
-    const windowHeight = mainContainer.clientHeight;
-
-    if(scrollTop === 0) {
-        const styleSheet = document.styleSheets[2];
-
-        console.log('stylesheet.cssRules[1]')
-        console.log(styleSheet.cssRules[1]);
-    for(let i = 0; styleSheet.cssRules.length; i++) {
-        const rule = styleSheet.cssRules[i];
-    
-        if(rule.selectorText === '::-webkit-scrollbar-thumb') {
-            console.log('A barra chegou em cima..');
-            rule.style.borderRadius = '0 .5rem .5rem 0';
-        
-        }
-      }
-    }
-
-        
-    
-
-    if(scrollTop + windowHeight === containerHeight) {
-        mainContainer.style = 'border-radius: 0 0 .5rem 0'
-    }
-
-})
-
-
 
 searchInput.addEventListener('input', () => {
     if(searchInput.value.length > 0) {
@@ -229,9 +199,11 @@ searchIcon.addEventListener('click', () => {
     cards.innerHTML = '';
     // cards.innerText = ''; //outra forma possível
     
-    const searchTerm = searchInput.value.toLowerCase();
+    searchTerm = searchInput.value.toLowerCase();
     
     requestApi(searchTerm);
+
+    //Abaixo controles do botão play que aparece ao passar o mouse em cima do card..
 
     cards.addEventListener('mouseover', evt => {
         const card = evt.target.closest('.card');
@@ -257,6 +229,41 @@ searchIcon.addEventListener('click', () => {
 
 })
 
+//Implementação border-radius scroll main container dos cards...
 
+setTimeout(()=> {
+    mainContainer.addEventListener('scroll', () => {
+        const scrollTop = mainContainer.scrollTop;
+        const containerHeight = mainContainer.scrollHeight;
+        const windowHeight = mainContainer.clientHeight;
+
+        mainContainer.classList.add('scroll_top');
+    
+        if(scrollTop == 0) {
+            mainContainer.classList.add('scroll_top');     
+        } else if(scrollTop + windowHeight == containerHeight) {
+            mainContainer.classList.add('scroll_bottom');
+        } else {
+            mainContainer.classList.remove('scroll_top');
+            mainContainer.classList.remove('scroll_bottom');
+        }
+    
+    })
+}, 100)
+
+
+
+//Chamada do função para carregar todos os cards na inicialização..
+
+requestApi(searchTerm);
+
+const scrollTop = mainContainer.scrollTop;
+
+if(scrollTop == 0) {
+    mainContainer.classList.add('scroll_top');
+}
+
+mainContainer.classList.remove('show_scroll');
+console.log(`scrollTop ${scrollTop}`);
 
 
