@@ -13,6 +13,8 @@ const boxWidthScroll = document.querySelector('.box_with_scroll');
 
 const mainContainer = document.querySelector('.main_container');
 
+const footerMain = document.querySelector('.footer_main');
+
 let searchTerm = searchInput.value.toLowerCase(); //variável inicializada aqui p/ poder ser usada em mais de um lugar, inclusive dentro da função que inicia a aplicação..
 
 let timer, timerMain;
@@ -159,6 +161,7 @@ function createCard(elem) {
     divCard.appendChild(divPlay);
     
     cards.appendChild(divCard);
+
 }
 
 function requestApi(searchTerm) {
@@ -170,8 +173,16 @@ function requestApi(searchTerm) {
         console.log(res);
         res.forEach(el => {
             createCard(el);
-        })     
+        }) 
+
+    cards.appendChild(footerMain);
+    footerMain.classList.remove('hidden'); 
+           
     })
+
+    
+
+
 }
 
 
@@ -194,7 +205,6 @@ function requestApi(searchTerm) {
 const searchIcon = document.querySelector('.bi-search');
 
 searchIcon.addEventListener('click', () => {
-    const divCard = document.querySelectorAll('.card');
 
     cards.innerHTML = '';
     // cards.innerText = ''; //outra forma possível
@@ -202,6 +212,8 @@ searchIcon.addEventListener('click', () => {
     searchTerm = searchInput.value.toLowerCase();
     
     requestApi(searchTerm);
+
+    console.log(`searchTerm ${searchTerm}`);
 
     //Abaixo controles do botão play que aparece ao passar o mouse em cima do card..
 
