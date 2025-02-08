@@ -57,11 +57,14 @@ body {
     font-size: .75rem;
     font-weight: 100;
     visibility: hidden;
-    transition: visibility 0s linear 0.5s;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .logo_spotify:hover::after {
     visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
 }
 
 .menu_logo img {
@@ -92,11 +95,15 @@ body {
     visibility: hidden;
     font-size: .85rem;
     font-weight: 400;
-    transition: visibility 0s linear 0.25s;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .home_menu:hover::after {
     visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
 }
 
 .bi-house-door-fill {
@@ -170,11 +177,15 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-size: .85rem;
     font-weight: 400;
-    transition: visibility 0s linear 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .search_icon:hover::after {
     visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
 }
 
 .search_icon svg {
@@ -222,18 +233,30 @@ body {
 
 .purse_icon::after {
     content: attr(data-tooltip);
+    width: 4rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .2rem;
     position: absolute;
     top: 3rem;
+    left: -1rem;
     font-family: 'Ubuntu', sans-serif;
     font-size: .85rem;
     font-weight: 400;
+    background-color: #222121;
     color: #fff;
+    z-index: 200;
+    opacity: 0;
     visibility: hidden;
-    transition: visibility 0s linear 0.5s;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .purse_icon:hover::after {
     visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
 }
 
 .purse_icon svg {
