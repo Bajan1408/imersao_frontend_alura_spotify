@@ -37,6 +37,33 @@ body {
     align-items: center;
 }
 
+.logo_spotify {
+    position: relative;
+}
+
+.logo_spotify::after {
+    content: attr(data-tooltip);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    width: 3.5rem;
+    height: 1.5rem;
+    color: #000;
+    background-color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .75rem;
+    font-weight: 100;
+    visibility: hidden;
+    transition: visibility 0s linear 0.5s;
+}
+
+.logo_spotify:hover::after {
+    visibility: visible;
+}
+
 .menu_logo img {
     width: 2.5rem;
     margin-left: 1rem;
@@ -46,20 +73,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
     background-color: #241f1f;
     opacity: .90;
+
 }
 
 .home_menu::after {
     content: attr(data-tooltip);
     position: absolute;
-    left: 8rem;
     top: 3.5rem;
     color: #fff;
+    font-family: 'Ubuntu', sans-serif;
     visibility: hidden;
+    font-size: .85rem;
+    font-weight: 400;
+    transition: visibility 0s linear 0.25s;
 }
 
 .home_menu:hover::after {
@@ -125,6 +158,23 @@ body {
     position: absolute;
     left: .75rem;
     cursor: pointer;
+
+}
+
+.search_icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 3rem;
+    color: #fff;
+    visibility: hidden;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .85rem;
+    font-weight: 400;
+    transition: visibility 0s linear 0.5s;
+}
+
+.search_icon:hover::after {
+    visibility: visible;
 }
 
 .search_icon svg {
@@ -168,6 +218,22 @@ body {
     position: absolute;
     right: .75rem;
     cursor: pointer;
+}
+
+.purse_icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .85rem;
+    font-weight: 400;
+    color: #fff;
+    visibility: hidden;
+    transition: visibility 0s linear 0.5s;
+}
+
+.purse_icon:hover::after {
+    visibility: visible;
 }
 
 .purse_icon svg {
